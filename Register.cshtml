@@ -41,7 +41,6 @@
 
             .nav-item:hover {
                 background-color: #555;
-
             }
 
             .nav-item.active {
@@ -51,13 +50,11 @@
 
                 .nav-item.active a {
                     color: #000;
-                
                 }
 
         .navbar-brand img {
             width: 1100px;
             height: auto;
-            
         }
 
         .image-container {
@@ -70,11 +67,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-           
             font-size: 34px;
-           
             font-weight: bold;
-            
         }
 
         div {
@@ -91,10 +85,10 @@
             font-size: 16px;
         }
 
-            button:hover {
-                background-color: gray;
-                border: none;
-            }
+        button:hover {
+            background-color: gray;
+            border: none;
+        }
 
         .footer {
             width: 100%;
@@ -104,9 +98,9 @@
             background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/22/58/88/62/0/700_FO225888620_c4dfb0a92674ddba576ab6272961bcb8,700,467,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,417,jpg)/duvar-resimleri-sukran-gunu-yemegi-arka-plan.jpg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            height: 500px;
+            height: 600px;
             width: 100%;
-            opacity:0.9;
+            opacity: 0.9;
         }
 
 
@@ -121,13 +115,13 @@
             padding: 5px 40px;
             border-radius: 15px;
             background-color: black;
-            color: white; 
-            border: none; 
+            color: white;
+            border: none;
             cursor: pointer;
         }
 
             .button-style:hover {
-                background-color: gray; 
+                background-color: gray;
             }
 
     </style>
@@ -167,25 +161,28 @@
         </div>
     </nav>
     <div class="register">
-        <form method="post">
-            <div class="mb-3" style="margin-right:600px;color:white;">
-                <label for="exampleInputEmail1" class="form-label">User Name</label>
-                <input type="text" class="form-control bg-transparent" id="exampleInputEmail1" name="UserName" placeholder="Kullanıcı_adı" style="width:100%; color: white;">
-            </div>
-            <div class="mb-3" style="margin-right:600px;color:white;">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control bg-transparent" id="exampleInputEmail1" name="UserMail" placeholder="E-posta" style="width:100%; color: white;">
-            </div>
-            <div class="mb-3" style="margin-right:600px;color:white;">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control bg-transparent" name="PasswordHash" id="exampleInputPassword1" placeholder="Şifre" style="width:100%; color: white;">
-            </div>
-            <div class="mb-3" style="margin-right:600px;color:white;">
-                <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control bg-transparent" name="ConfirmPassword" id="exampleInputPassword2" placeholder="Şifreyi Onayla" style="width:100%; color: white;">
-            </div>
-            <button type="submit" class="btn button-style">Register</button>
-        </form>
+        <div class="formm">
+            <form method="post">
+                <div  style="margin-right:600px;color:white;">
+                    <label for="exampleInputEmail1" class="form-label mt-3">User Name</label>
+                    <input type="text" class="form-control bg-transparent mb-3" id="exampleInputEmail1" name="UserName" placeholder="Kullanıcı_adı" style="width:100%; color: white;">
+                </div>
+                <div style="margin-right:600px;color:white;">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control bg-transparent mb-3" id="exampleInputEmail1" name="UserMail" placeholder="E-posta" style="width:100%; color: white;">
+                </div>
+                <div style="margin-right:600px;color:white;">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control bg-transparent mb-3" name="PasswordHash" id="exampleInputPassword1" placeholder="Şifre" style="width:100%; color: white;">
+                </div>
+                <div class="mb-3" style="margin-right:600px;color:white;">
+                    <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control bg-transparent mb-3" name="ConfirmPassword" id="exampleInputPassword2" placeholder="Şifreyi Onayla" style="width:100%; color: white;">
+                </div>
+                <button type="submit" class="btn button-style">Register</button>
+            </form>
+        </div>
+       
         <!--Hata mesajı-->
         @if (!string.IsNullOrEmpty(Model.ErrorMessage))
         {
@@ -247,4 +244,3 @@
 </body>
 
 </html>
-
