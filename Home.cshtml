@@ -95,17 +95,18 @@
 
 
         input {
-            width: 100%;
-            padding: 15px;
+            width: 75%;
+            padding: 20px;
             box-sizing: border-box;
             background: none; 
             text-align: center;
             border: none;
+            color:white;
             border-bottom: 1px solid black; 
         }
 
         .btn{
-            border-radius:250px;
+            border-radius:25px;
             padding: 10px 20px;
             background-color: black;
             color: #fff;   
@@ -161,23 +162,23 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/Index4.cshtml">Home</a>
+                        <a class="nav-link" href="/Index.cshtml">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/About.cshtml">About</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/About')">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Gallery.cshtml">Gallery</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Gallery')">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                     
                     <li class="nav-item ps-5">
-                        <a class="nav-link" href="/Login.cshtml">Login</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Login')">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Register.cshtml">Register</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Register')">Register</a>
                     </li>
                 </ul>
                
@@ -357,7 +358,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script>
+        function goToPage(pageUrl) {
+            // Belirtilen sayfa URL'sine yönlendirme
+            window.location.href = pageUrl;
+        }
+    </script>
   
 </body>
 </html>
