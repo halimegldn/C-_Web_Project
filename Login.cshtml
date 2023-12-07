@@ -135,7 +135,7 @@
 </head>
 
 <body>
-
+    <!-- Navbar eklendi-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="width:100%;">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,25 +143,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/Index4.cshtml">Home</a>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Index.cshtml">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/About')">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Gallery')">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
 
-                    <li class="nav-item ps-5 active">
-                        <a class="nav-link" href="/Index.cshtml">Login</a>
+                    <li class="nav-item active ps-5">
+                        <a class="nav-link" href="#" onclick="goToPage('/Login')">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Index1.cshtml">Register</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Register')">Register</a>
                     </li>
                 </ul>
                 <!-- Navbar altına Giriş için bir Form oluşturuldu -->
@@ -238,7 +237,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script>
+        function goToPage(pageUrl) {
+            // Belirtilen sayfa URL'sine yönlendirme
+            window.location.href = pageUrl;
+        }
+    </script>
 </body>
 
 </html>
