@@ -136,24 +136,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Index.cshtml">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/About')">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Gallery')">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
 
                     <li class="nav-item ps-5">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Login')">Login</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link" href="#" onclick="goToPage('/Register')">Register</a>
                     </li>
                 </ul>
                 <!-- Navbar altına Kayıt için Form oluşturuldu -->
@@ -240,7 +240,12 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script>
+        function goToPage(pageUrl) {
+            // Belirtilen sayfa URL'sine yönlendirme
+            window.location.href = pageUrl;
+        }
+    </script>
 </body>
 
 </html>
