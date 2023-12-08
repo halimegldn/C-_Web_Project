@@ -44,8 +44,8 @@ namespace bitirme_porject.Pages.Customers
             List<Meal> filteredMeals = LoadFilteredMeals();
             // TempData'ye eklemek için JSON formatına çevirme
             TempData["FilteredMeals"] = JsonSerializer.Serialize(filteredMeals);
-            // Index3 sayfasına yönlendirme
-            return RedirectToPage("Index3");
+            // Sonuc sayfasına yönlendirme
+            return RedirectToPage("Sonuc");
         }
 
 
