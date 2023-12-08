@@ -1,0 +1,36 @@
+@page
+@model bitirme_porject.Pages.Customers.SonucModel
+@{
+    ViewData["Title"] = "Filtered Meals";
+}
+
+<h1>Filtered Meals</h1>
+@if (Model.FilteredMeals.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Ingredients</th>
+                <th>Recipe</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var meal in Model.FilteredMeals)
+            {
+                <tr>
+                    <td><img src="@meal.ImageUrl" alt="Meal Image" width="100"></td>
+                    <td>@meal.Name</td>
+                    <td>@meal.Ingredients</td>
+                    <td>@meal.Recipe</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No meals found.</p>
+}
+
